@@ -1,0 +1,87 @@
+/* ==============================================================
+   manual.css
+   Hoja de estilos del Manual de Usuario · Reproductor de Audio Digital
+   ============================================================== */
+
+:root{
+  --bg:#fafafa; --ink:#1a1a1a; --line:#ddd; --accent:#2b2b2b; --soft:#f2f2f2;
+}
+*{box-sizing:border-box;}
+body{font-family: Georgia, 'Times New Roman', serif; background:var(--bg); color:var(--ink); margin:0; line-height:1.6;}
+.wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+header.top-nav{background:var(--accent); color:#fff; padding:10px 0; position:sticky; top:0; z-index:10;}
+header.top-nav nav ul{display:flex; flex-wrap:wrap; gap:16px; list-style:none; margin:0; padding:0; font-family: Arial, sans-serif; font-size:13px;}
+header.top-nav a{color:#fff; text-decoration:none;}
+header.top-nav a:hover{text-decoration:underline;}
+
+section{padding:48px 0; border-bottom:1px solid var(--line);}
+h1,h2,h3{font-family: Arial, Helvetica, sans-serif; letter-spacing:0.5px;}
+h1{font-size:2.2em; text-align:center;}
+h2{font-size:1.6em; border-bottom:2px solid var(--ink); padding-bottom:8px; margin-top:0;}
+h3{font-size:1.15em; margin-bottom:4px;}
+.eyebrow{font-family: Arial, sans-serif; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:#777; text-align:center; margin-bottom:6px;}
+figure{margin:20px 0; text-align:center;}
+figure img{max-width:280px; width:100%; border:1px solid var(--line); border-radius:4px;}
+figcaption{font-family: Arial, sans-serif; font-size:12px; color:#666; margin-top:6px;}
+
+/* Portada */
+#portada{text-align:center; padding-top:60px;}
+#portada .subtitulo{font-family: Arial, sans-serif; font-size:1.1em; color:#555; margin-top:-6px;}
+#portada .meta{font-family: Arial, sans-serif; font-size:13px; color:#888; margin-top:40px;}
+#portada figure img{max-width:220px;}
+
+/* Indice */
+.indice-lista{list-style:none; padding:0; font-family: Arial, sans-serif;}
+.indice-lista > li{margin-bottom:10px; font-weight:bold;}
+.indice-lista ul{list-style:none; padding-left:20px; font-weight:normal; margin-top:6px;}
+.indice-lista a{color:var(--ink); text-decoration:none; border-bottom:1px dotted #999;}
+.indice-lista a:hover{color:#000; border-bottom-color:#000;}
+
+/* Cajas de aviso */
+.box{border:1px solid var(--line); background:var(--soft); border-radius:6px; padding:16px 20px; margin:16px 0;}
+.box h3{margin-top:0;}
+.box.warning{border-left:5px solid #b33;}
+.box.note{border-left:5px solid #2b6cb0;}
+.box.rule{border-left:5px solid #6b7280;}
+
+/* Prerequisitos */
+.prereq-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; font-family: Arial, sans-serif; font-size:14px;}
+.prereq-grid .item{border:1px solid var(--line); border-radius:6px; padding:12px;}
+
+/* Mapa de navegacion */
+.keymap{display:grid; grid-template-columns: 1fr 1.2fr; gap:24px; align-items:start;}
+table.keys{width:100%; border-collapse:collapse; font-family: Arial, sans-serif; font-size:14px;}
+table.keys th, table.keys td{border:1px solid var(--line); padding:8px 10px; text-align:left;}
+table.keys th{background:var(--soft);}
+
+/* Guias paso a paso */
+.guia{border:1px solid var(--line); border-radius:8px; margin-bottom:22px; overflow:hidden;}
+.guia > summary{cursor:pointer; padding:14px 18px; background:var(--soft); font-family: Arial, sans-serif; font-weight:bold; list-style:none;}
+.guia > summary::-webkit-details-marker{display:none;}
+.guia > summary::before{content:"? "; }
+.guia[open] > summary::before{content:"? "; }
+.guia .contenido{padding:16px 20px;}
+.guia ol{padding-left:20px;}
+.guia li{margin-bottom:6px;}
+
+/* Reglas de negocio */
+table.reglas{width:100%; border-collapse:collapse; font-family: Arial, sans-serif; font-size:14px; margin-top:12px;}
+table.reglas th, table.reglas td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+table.reglas th{background:var(--soft);}
+
+/* Soporte */
+table.problemas{width:100%; border-collapse:collapse; font-family: Arial, sans-serif; font-size:14px;}
+
+table.problemas th, table.problemas td{border:1px solid var(--line); padding:10px; text-align:left; vertical-align:top;}
+table.problemas th{background:var(--soft);}
+
+dl.glosario{font-family: Arial, sans-serif; font-size:14px;}
+dl.glosario dt{font-weight:bold; margin-top:12px;}
+dl.glosario dd{margin-left:0; color:#333;}
+
+.contacto-card{font-family: Arial, sans-serif; font-size:14px; border:1px solid var(--line); border-radius:8px; padding:20px; max-width:420px;}
+.contacto-card p{margin:6px 0;}
+
+footer.final{text-align:center; font-family: Arial, sans-serif; font-size:12px; color:#888; padding:30px 0;}
+
+a.volver{display:inline-block; margin-top:10px; font-family:Arial, sans-serif; font-size:12px; color:#666; text-decoration:none;}
